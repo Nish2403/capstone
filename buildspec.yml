@@ -1,0 +1,7 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - docker build -t my-app .
+      - docker tag my-app:latest my-dockerhub-username/my-app:latest
+      - docker push my-dockerhub-username/my-app:latest
